@@ -5,12 +5,11 @@
 # при d = 0.001, π = 3.141.    10^-1 ≤ d ≤ 10^-10
 import math
 
-d = int(input())
+d = float(input())
+d = len(str(d)) - 2
 
-f = round(math.pi, d)
+print(round(math.pi, d))
 
-print(f)
 
-#Помоему я неправильно понял задачу)
 
 
