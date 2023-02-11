@@ -1,25 +1,16 @@
-# Напишите программу, которая найдёт произведение пар чисел списка. 
-# Парой считаем первый и последний элемент, второй и предпоследний и т.д.
+# Напишите программу, которая принимает на вход число N и выдает набор произведений чисел от 1 до N.
 
 # Пример:
-# - [2, 3, 4, 5, 6] => [12, 15, 16];
-# - [2, 3, 5, 6] => [12, 15]
+# пусть N = 4, тогда [ 1, 2, 6, 24 ] (1, 1*2, 1*2*3, 1*2*3*4)
 
-list1 = list(range(int(input()))) #Сами генерируем длину списка
-print(list1)
-list2 = list1[::-1]
-print(list2)
+size = int(input())
 
-len1 = 0
-if len(list1) % 2 == 0:
-    len1 = len(list1) // 2
-else:
-    len1 = len(list1) // 2 + 1
+startlist = list(range(1,size + 1))
+resultlist = startlist
 
-list3 = list(range(len1))
-
-for i in range(len1):
-    list3[i] = list1[i] * list2[i]
-
-print()
-print(list3)
+multi = 1
+for i in range(len(startlist)):
+    multi *= startlist[i]
+    resultlist[i] = multi
+    
+print(resultlist)
